@@ -11,6 +11,10 @@ namespace Infrastructure
 
         public IGenericRepository<Student> StudentRepository =>
             new GenericRepository<Student>(_dbContext);
+        public IGenericRepository<Teacher> TeacherRepository =>
+            new GenericRepository<Teacher>(_dbContext);
+        public IGenericRepository<PowerPole> PowerPoleRepository =>
+            new GenericRepository<PowerPole>(_dbContext);
 
         public IGenericRepository<Discipline> DisciplineRepository =>
             new GenericRepository<Discipline>(_dbContext);

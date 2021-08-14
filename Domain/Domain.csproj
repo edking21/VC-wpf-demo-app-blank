@@ -49,8 +49,11 @@
     <Compile Include="Models\Interfaces\IExam.cs" />
     <Compile Include="Models\Interfaces\IDiscipline.cs" />
     <Compile Include="Models\Interfaces\IPerson.cs" />
+    <Compile Include="Models\Interfaces\IPole.cs" />
+    <Compile Include="Models\Interfaces\IPowerPole.cs" />
     <Compile Include="Models\Interfaces\IStudent.cs" />
     <Compile Include="Models\Interfaces\ITeacher.cs" />
+    <Compile Include="Models\PowerPole.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

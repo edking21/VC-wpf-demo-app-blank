@@ -2,6 +2,7 @@
 using Infrastructure.Interfaces;
 using Service;
 using Service.Common;
+using Service.Interfaces;
 using System.Windows;
 using Unity;
 using Unity.Lifetime;
@@ -27,6 +28,7 @@ namespace UniversityWPF
             Container.RegisterType<IStudentService, StudentService>(new TransientLifetimeManager());
             Container.RegisterType<ITeacherService, TeacherService>(new TransientLifetimeManager());
             Container.RegisterType<IAppointmentService, AppointmentService>(new TransientLifetimeManager());
+            Container.RegisterType<IPowerPoleService, PowerPoleService>(new TransientLifetimeManager());
 
             Container.Resolve<MainWindow>().Show();
 

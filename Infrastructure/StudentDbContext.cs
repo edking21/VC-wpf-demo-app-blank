@@ -12,6 +12,8 @@ namespace Infrastructure
 
         public DbSet<Teacher> Teachers { get; set; }
 
+        public DbSet<PowerPole> PowerPoles{ get; set; }
+
         public DbSet<Discipline> Disciplines { get; set; }
 
         public DbSet<Exam> Exams { get; set; }

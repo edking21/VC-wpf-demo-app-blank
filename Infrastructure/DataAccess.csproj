@@ -54,6 +54,7 @@
     <Compile Include="Interfaces\IUniversityLocalContext.cs" />
     <Compile Include="Interfaces\IStudentDbContext.cs" />
     <Compile Include="Local\StudentList.cs" />
+    <Compile Include="Local\PowerPoleList.cs" />
     <Compile Include="Local\TeacherList.cs" />
     <Compile Include="Migrations\201906241449415_Initial.cs" />
     <Compile Include="Migrations\201906241449415_Initial.Designer.cs">

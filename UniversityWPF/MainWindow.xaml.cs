@@ -1,4 +1,5 @@
 ﻿using Service;
+using Service.Interfaces;
 using System.Windows;
 using Telerik.Windows.Controls;
 using UniversityWPF.ViewModels;
@@ -12,20 +13,20 @@ namespace UniversityWPF
     {
         private readonly IStudentService _studentService;
         private readonly ITeacherService _teacherService;
-        private readonly IAppointmentService _appointmentService;
+        private readonly IPowerPoleService _powerPoleService;
 
         public MainWindow(IStudentService studentService,
                           ITeacherService teacherService,
-                          IAppointmentService appointmentService)
+                          IPowerPoleService powerPoleService)
         {
             _studentService = studentService;
             _teacherService = teacherService;
-            _appointmentService = appointmentService;
+            _powerPoleService = powerPoleService;
 
             StyleManager.ApplicationTheme = new MaterialTheme();
             InitializeComponent();
 
-            DataContext = new InputsViewModel(_studentService, _teacherService);
+            DataContext = new InputsViewModel(_studentService, _teacherService, _powerPoleService);
         }
 
         private void RadTreeView_ItemClick(object sender, Telerik.Windows.RadRoutedEventArgs e)
@@ -35,7 +36,7 @@ namespace UniversityWPF
             switch (header)
             {
                 case "Inputs":
-                    DataContext = new InputsViewModel(_studentService, _teacherService);
+                    DataContext = new InputsViewModel(_studentService, _teacherService, _powerPoleService);
                     break;
                 case "Chart":
                     DataContext = new ChartViewModel(_studentService);
@@ -47,7 +48,7 @@ namespace UniversityWPF
                     DataContext = new GridViewModel(_studentService);
                     break;
                 case "Scheduler":
-                    DataContext = new SchedulerViewModel(_appointmentService);
+                    DataContext = null;
                     break;
                 case "Report":
                     DataContext = new ReportViewModel();

@@ -7,5 +7,6 @@ namespace Infrastructure
         StudentList Students { get; }
 
         TeacherList Teachers { get; }
+        PowerPoleList PowerPoles { get; }
     }
 }
